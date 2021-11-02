@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+		{% block nav %}
+		<nav id="fh5co-main-menu" role="navigation">
+				<ul>
+					<li><a href="{% url 'index' %}">Главная</a></li>
+					<li><a href="{% url 'about' %}">О нас</a></li>
+					<li><a href="{% url 'contact' %}">Контакты</a></li>
+					<li><a href="{% url 'branch' %}">Филиалы</a></li>
+				</ul>
+			</nav>
+		{% endblock %}
+
+{% block content %}
+    <!-- Preloader -->
+            <div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+            <div class="row animate-box" data-animate-effect="fadeInLeft" align="center">
+            <section id="wrapper" class="container-fluid">
+                <div class="error-box">
+                    <div class="error-body text-center">
+                        <h1 class="text-danger">404</h1>
+                        <h3>Страница не найдена</h3>
+                        <p class="text-muted m-t-30 m-b-30">Начните поиск с начала</p>
+                        <a href="{% url 'index' %}" class="btn btn-primary btn-outline">вернуться на Главную</a>
+                    </div>
+                </div>
+            </section>
+            </div>
+            </div>
+            </div>
+{% endblock %}
